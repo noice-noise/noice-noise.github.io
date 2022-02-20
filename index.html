@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    TODO hide/show nav onScroll TODO
+
     <!-- CSS-->
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fontawesome -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
-    />
+    /> -->
+
+    <script
+      src="https://kit.fontawesome.com/d3e215b605.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +45,10 @@
     </nav>
 
     <section id="welcome-section">
-      <h1>Raul Comeros, Jr.</h1>
-      <h3>▼</h3>
+      <div id="welcome-title">
+        <h1>Raul Comeros, Jr.</h1>
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
     </section>
 
     <div class="section-title">
@@ -63,6 +72,7 @@
           <a
             href="https://github.com/noice-noise/TECH-D"
             class="project-tile-link"
+            target="_blank"
             >Github</a
           >
         </div>
@@ -83,6 +93,7 @@
           <a
             href="https://github.com/noice-noise/AVEM"
             class="project-tile-link"
+            target="_blank"
             >Github</a
           >
         </div>
@@ -102,11 +113,90 @@
           <a
             href="https://github.com/noice-noise/noice-webdev-labs"
             class="project-tile-link"
+            target="_blank"
             >Github</a
           >
         </div>
       </div>
     </section>
+
+    <div class="section-title">
+      <h1>Certificates</h1>
+    </div>
+
+    <section id="certificates">
+      <div class="flex-container">
+        <div class="project-tile">
+          <div class="flex-item">
+            <h1>freeCodeCamp</h1>
+          </div>
+          <div class="flex-item">
+            <p>Responsive Web Design</p>
+          </div>
+          <div class="flex-item">
+            <a href="#" class="project-tile-link">View</a>
+          </div>
+        </div>
+        <div class="project-tile">
+          <div class="flex-item">
+            <h1>freeCodeCamp</h1>
+          </div>
+          <div class="flex-item">
+            <p>Responsive Web Design</p>
+          </div>
+          <div class="flex-item">
+            <a href="#" class="project-tile-link">View</a>
+          </div>
+        </div>
+        <div class="project-tile">
+          <div class="flex-item">
+            <h1>freeCodeCamp</h1>
+          </div>
+          <div class="flex-item">
+            <p>Responsive Web Design</p>
+          </div>
+          <div class="flex-item">
+            <a href="#" class="project-tile-link">View</a>
+          </div>
+        </div>
+        <div class="project-tile">
+          <div class="flex-item">
+            <h1>freeCodeCamp</h1>
+          </div>
+          <div class="flex-item">
+            <p>Responsive Web Design</p>
+          </div>
+          <div class="flex-item">
+            <a href="#" class="project-tile-link">View</a>
+          </div>
+        </div>
+        <div class="project-tile">
+          <div class="flex-item">
+            <h1>freeCodeCamp</h1>
+          </div>
+          <div class="flex-item">
+            <p>Responsive Web Design</p>
+          </div>
+          <div class="flex-item">
+            <a href="#" class="project-tile-link">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="section-email" class="">
+      <div class="container">
+        <form class="form-group" id="form-email" action="/">
+          <label for="#">Email</label>
+          <input type="email" placeholder="Enter your email" />
+          <label for="#">First Name</label>
+          <input type="text" placeholder="Enter your first name" />
+          <label for="#">Last Name</label>
+          <input type="text" placeholder="Enter your last name" />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section> -->
 
     <div class="section-title">
       <h1>Profile</h1>
@@ -138,32 +228,6 @@
           target="_blank"
           >Twitter</a
         >
-      </div>
-    </section>
-
-    <div class="section-title">
-      <h1>Certificates</h1>
-    </div>
-
-    <section>
-      <div class="container">
-        <a href="#">HTML</a>
-        <a href="#">HTML</a>
-        <a href="#">HTML</a>
-        <a href="#">HTML</a>
-      </div>
-    </section>
-    <section id="section-email">
-      <div class="container">
-        <form class="form-group" id="form-email" action="/">
-          <label for="#">Email</label>
-          <input type="email" placeholder="Enter your email" />
-          <label for="#">First Name</label>
-          <input type="text" placeholder="Enter your first name" />
-          <label for="#">Last Name</label>
-          <input type="text" placeholder="Enter your last name" />
-          <input type="submit" value="Submit" />
-        </form>
       </div>
     </section>
 

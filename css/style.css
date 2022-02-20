@@ -13,6 +13,7 @@ nav {
   left: 0;
   width: 100%;
   background-color: var(--back-color);
+  z-index: 1;
 
   /* Box shadow specification from:
         https://getcssscan.com/?ref=beautifulboxshadow_header_logo */
@@ -61,16 +62,23 @@ footer {
 }
 
 #welcome-section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
+  /* margin: auto; */
   /* max-width: 20%; */
 }
 
+/* #welcome-title {
+  max-width: 1000px;
+  background-color: red;
+} */
+
 #welcome-section h1 {
-  /* font-size: clamp(1rem, 2rem, 5rem); */
+  /* white-space: nowrap; */
+  font-size: clamp(14px, 500px, 100px);
   font-weight: 900;
   padding-top: 15%;
   text-align: center;
@@ -95,18 +103,19 @@ footer {
 
 .section-title {
   text-align: center;
-  margin: auto;
+  margin: 100px auto auto auto;
 }
 
 .flex-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .project-tile {
   display: flex;
   flex-direction: column;
-  flex-basis: 400px;
+  flex-basis: 300px;
   justify-content: space-between;
   margin: 10px;
   padding: 20px 10px;
@@ -152,9 +161,24 @@ footer {
   border-style: solid;
 }
 
-@media screen and (max-width: 768px) {
+.hide {
+  visibility: hidden;
+}
+
+i {
+  font-size: 100px;
+}
+
+@media screen and (max-width: 1000px) {
   .flex-container {
     display: block;
     padding-top: 10px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  * {
+    padding: 0;
   }
 }
