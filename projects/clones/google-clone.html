@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Google Clone</title>
   </head>
@@ -24,8 +40,10 @@
       <div class="container">
         <form action="/search">
           <input type="text" />
-          <input type="button" value="Google Search" />
-          <input type="button" value="I'm Feeling Lucky" />
+          <div class="search-btn-group">
+            <input type="button" value="Google Search" />
+            <input type="button" value="I'm Feeling Lucky" />
+          </div>
         </form>
       </div>
       <div id="languages">
@@ -53,9 +71,9 @@
         </div>
         <div class="site">
           <ul>
-            <li><a href="/privacy" target="_blank">About</a></li>
-            <li><a href="/terms" target="_blank">Advertising</a></li>
-            <li><a href="/settings" target="_blank">Business</a></li>
+            <li><a href="/privacy" target="_blank">Privacy</a></li>
+            <li><a href="/terms" target="_blank">Terms</a></li>
+            <li><a href="/settings" target="_blank">Settings</a></li>
           </ul>
         </div>
       </div>
