@@ -1,6 +1,8 @@
 :root {
   --color-primary: #fff;
   --color-background: #000;
+  --color-background-secondary: #f2f2f2;
+  --color-background-tertiary: #cecece;
 }
 
 * {
@@ -16,16 +18,22 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: 100vh;
+  flex: 1 0 auto;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 22px;
 }
 
 nav ul {
   justify-content: space-between;
+}
+
+nav li {
+  padding-left: 10px;
 }
 
 ul {
@@ -33,24 +41,32 @@ ul {
   align-items: center;
 }
 
-nav li {
-  /* margin: 10px; */
-}
-
 main {
-  margin: auto;
-  width: 42%;
+  margin: 0 auto;
+  padding: 0 100px;
+  width: 80%;
+  height: 100%;
+  /* aspect-ratio: 16 / 9; */
   text-align: center;
 }
 
 main h1 {
-  font-size: 100px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: -3px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 footer {
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--color-background-secondary);
+  padding-top: 2px;
 }
 
 footer a,
@@ -59,7 +75,7 @@ footer p {
 }
 
 footer .country {
-  padding: 10px 40px;
+  padding: 20px 40px;
 }
 
 footer .google {
@@ -67,11 +83,12 @@ footer .google {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid var(--color-background-tertiary);
   /* border: 1px gray solid; */
 }
 
 input {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 input[type="button"] {
@@ -79,7 +96,7 @@ input[type="button"] {
   padding: 10px;
   border-radius: 5px;
   border-style: none;
-  margin: 40px 5px;
+  margin: 30px 5px;
 }
 
 input[type="button"]:hover {
@@ -93,18 +110,20 @@ input[type="text"] {
   display: block;
   width: 100%;
   border-radius: 55px;
-  padding: 15px;
+  border: 1px solid var(--color-background-tertiary);
+  padding: 12px 10px 12px 40px;
 }
 
 #languages {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 }
 
 ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 li {
@@ -113,4 +132,27 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    aspect-ratio: 16 / 9;
+    width: fit-content;
+  }
+
+  footer .google {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .search-btn-group {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
