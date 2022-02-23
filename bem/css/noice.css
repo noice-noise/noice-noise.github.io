@@ -1,0 +1,62 @@
+/*
+
+noice.css
+
+- an attempt to create library for my own reusable css contents
+keeping mind of BEM methodology
+
+*/
+
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.flex-row {
+  flex-direction: row;
+}
+
+.flex.flex-column {
+  flex-direction: column;
+}
+
+.card {
+  margin: 2em;
+  max-width: 300px;
+  padding: 2em;
+  box-shadow: 0 10px 30px -10px rgb(0, 0, 0, 0.45);
+}
+
+.card--dark {
+  background-color: black;
+  color: white;
+}
+
+.card__img {
+}
+
+.card__title {
+}
+
+.card__body {
+  opacity: 80%;
+}
+
+.card__btn {
+  padding: 1em 1.25em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+.cta-connect {
+  max-width: 600px;
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-connect__title {
+  margin-left: 0;
+  font-size: 1.25rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+}
+
+.field {
+  margin-top: 0.75rem;
+}
+
+.field__label {
+  display: block;
+}
+
+.field__input {
+  margin-top: 0.5em;
+  padding: 1em;
+  width: 100%;
+}
+
+.field__message {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 1em;
+  resize: none;
+}
+
+.field__btn {
+  padding: 0.75em 2em;
+}

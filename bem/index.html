@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/cta-connect.css" type="text/css" />
+    <title>Practice | BEM</title>
+  </head>
+  <body>
+    <main class="flex flex-column">
+      <div class="card">
+        <!-- <img src="./img/tech_d_banner.png" alt="card-banner" /> -->
+        <h1 class="card__title">Hello, I'm an H1</h1>
+        <p class="card__body">And I'm a paragraph content!</p>
+        <button class="card__btn">Click me!</button>
+      </div>
+      <div class="card card--dark">
+        <!-- <img src="./img/tech_d_banner.png" alt="card-banner" /> -->
+        <h1 class="card__title">Hello, I'm an H1</h1>
+        <p class="card__body">And I'm a paragraph content!</p>
+        <button class="card__btn">Click me!</button>
+      </div>
+
+      <div class="cta-connect">
+        <div class="cta-connect__title">
+          <h3>Let's Connect!</h3>
+        </div>
+
+        <form action="#">
+          <div class="field">
+            <label for="#" class="field__label">Name: </label>
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="field">
+            <label for="#" class="field__label">Email: </label>
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="field">
+            <label for="#" class="field__label">Subject(optional): </label>
+            <input
+              type="text"
+              class="field__input"
+              placeholder="Please enter the subject"
+            />
+          </div>
+          <div class="field">
+            <label for="#" class="field__label">Message: </label>
+            <textarea
+              name="field-message"
+              id="cta-connect-msg"
+              class="field__message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="field">
+            <input type="button" class="field__btn" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
