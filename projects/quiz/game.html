@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <title></title>
+  </head>
+  <body class="bg-gray-200 text-gray-800 antialiased">
+    <div id="loader" class="flex h-screen items-center justify-center">
+      <div
+        class="h-16 w-16 animate-spin rounded-full border-[0.5rem] border-white border-t-violet-700"
+      ></div>
+    </div>
+
+    <div
+      id="game"
+      class="mx-auto flex hidden h-screen max-w-xl flex-col items-center px-5"
+    >
+      <div
+        class="mb-0 flex w-full items-center justify-between py-3 md:mb-5 md:pb-1"
+      >
+        <a
+          class="group rounded-xl p-3 leading-none hover:bg-violet-700 focus:bg-violet-800"
+          href="quizHome.html"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 group-hover:text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </a>
+        <p class="text-lg font-bold tracking-wider text-violet-700">
+          Quick Quiz
+        </p>
+        <a
+          class="group rounded-xl p-3 leading-none hover:bg-violet-700 focus:bg-violet-800"
+          href="https://github.com/noice-noise"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 group-hover:fill-yellow-400 group-hover:stroke-transparent"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="mb-5 flex w-full justify-between gap-5 px-10" id="hud">
+        <div
+          class="hud-item m-0 flex flex-col items-center justify-between gap-2 pt-2"
+        >
+          <h2 id="progressText" class="hud-prefix text-sm leading-none">
+            Question
+          </h2>
+          <div
+            id="questionProgressBar"
+            class="h-full min-w-[10rem] rounded-lg border-2 border-violet-700"
+          >
+            <div class="h-full w-[0%] bg-violet-700" id="progressBarFull"></div>
+          </div>
+        </div>
+
+        <div
+          class="hud-item m-0 flex flex-col items-center justify-center gap-2 p-0"
+        >
+          <h2 class="hud-prefix text-sm leading-none">Score</h2>
+          <p
+            id="scoreText"
+            class="hud-main-text text-4xl font-bold leading-none text-violet-700"
+          >
+            0
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex h-screen w-full flex-col justify-center gap-4 md:justify-center"
+      >
+        <h2 id="question" class="mb-2 text-2xl font-bold md:text-3xl">
+          What's the answer to this question?
+        </h2>
+        <div
+          class="group flex transform-gpu shadow-sm transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg"
+        >
+          <p
+            class="choice-prefix flex items-center justify-center rounded-l-lg bg-violet-700 px-5 py-4 font-bold text-white"
+          >
+            A
+          </p>
+          <p
+            data-number="1"
+            class="choice-text flex w-full items-center rounded-r-lg bg-white px-5"
+          >
+            Lorem, ip
+          </p>
+        </div>
+        <div
+          class="group flex transform-gpu shadow-sm transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg"
+        >
+          <p
+            class="choice-prefix flex items-center justify-center rounded-l-lg bg-violet-700 px-5 py-4 font-bold text-white"
+          >
+            B
+          </p>
+          <p
+            data-number="2"
+            class="choice-text flex w-full items-center rounded-r-lg bg-white px-5"
+          >
+            Lorem, ip
+          </p>
+        </div>
+        <div
+          class="group flex transform-gpu shadow-sm transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg"
+        >
+          <p
+            class="choice-prefix flex items-center justify-center rounded-l-lg bg-violet-700 px-5 py-4 font-bold text-white"
+          >
+            C
+          </p>
+          <p
+            data-number="3"
+            class="choice-text flex w-full items-center rounded-r-lg bg-white px-5"
+          >
+            Lorem, ip
+          </p>
+        </div>
+        <div
+          class="group flex transform-gpu shadow-sm transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg"
+        >
+          <p
+            class="choice-prefix flex items-center justify-center rounded-l-lg bg-violet-700 px-5 py-4 font-bold text-white"
+          >
+            D
+          </p>
+          <p
+            data-number="4"
+            class="choice-text flex w-full items-center rounded-r-lg bg-white px-5"
+          >
+            Lorem, ip
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
