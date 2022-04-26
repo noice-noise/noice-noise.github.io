@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  :root {
+    --color-text-base: #ede9fe;
+    --color-text-muted: #a1a1aa;
+    --color-text-inverted: #7c3aed;
+    --color-fill: #6d28d9;
+    --color-button-accent: #ede9fe;
+    --color-button-accent-hover: #f5f3ff;
+    --color-button-muted: #6d28d9;
+  }
+} */
+
+/* @layer base {
+  :root {
+    text-color: var(--color-text-neutral);
+  }
+} */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.theme-dark {
+  --color-primary: 109 40 217; /* #6D28D9 */
+  --color-primary-accent: 139 92 246; /* #8B5CF6 */
+  --color-primary-muted: 221 214 254; /* #DDD6FE */
+
+  --color-secondary: 255 196 2;
+  --color-secondary-accent: 255 196 2;
+  --color-secondary-muted: 255 196 2;
+
+  --color-text-neutral: 250 250 250; /* #fafafa */
+  --color-text-muted: 212 212 216; /* #d4d4d8 */
+
+  --color-foreground: 39 39 42; /* #27272A */
+  --color-background: 24 24 27; /* #18181B */
+}
+
+@layer components {
+  .body {
+    @apply theme-dark bg-background font-inter text-neutral;
+  }
+
+  .main-nav {
+  }
+
+  .main-nav__container {
+    @apply fixed top-0 z-10 flex w-full flex-col justify-between gap-5 border-b-4 border-primary bg-background py-8 lg:flex-row lg:py-0 lg:pt-2;
+  }
+
+  .main-nav__profile-container {
+    @apply flex basis-1/3 flex-col items-center justify-center gap-3;
+  }
+
+  .main-nav__profile-title {
+    @apply text-lg font-bold lg:hidden;
+  }
+
+  .main-nav__list {
+    @apply hidden flex-col  items-center justify-center gap-5 py-5 md:flex-row lg:flex lg:py-0;
+  }
+
+  .main-nav__list-item {
+    @apply font-bold transition-all duration-150 hover:bg-primary-accent hover:shadow-lg hover:shadow-primary/50 focus:bg-primary active:bg-primary;
+    @apply px-4 py-2;
+  }
+
+  .container {
+    @apply mx-auto px-5 lg:px-10;
+  }
+
+  .section {
+    @apply pt-28;
+  }
+
+  .section__title {
+    @apply py-10 text-center text-5xl font-black;
+  }
+
+  .btn {
+    @apply flex justify-center bg-primary font-bold shadow-lg shadow-primary/25 transition-all duration-150 hover:bg-primary-accent hover:shadow-primary/50 focus:bg-primary active:focus:bg-primary;
+    @apply px-4 py-2;
+  }
+
+  .group--btn {
+    @apply flex justify-center bg-primary font-bold shadow-lg shadow-primary/25 transition-all duration-150 hover:bg-primary-accent hover:shadow-primary/50 focus:bg-primary active:focus:bg-primary;
+    @apply px-4 py-2;
+  }
+
+  .stack {
+    @apply flex flex-col flex-wrap items-stretch justify-center gap-5 sm:flex-row;
+  }
+
+  .card {
+    @apply relative flex  max-w-sm transform-gpu flex-col items-stretch justify-between bg-foreground pt-52 text-center text-base drop-shadow-sm transition-all duration-150 hover:-translate-y-3 hover:cursor-pointer  hover:drop-shadow-lg;
+  }
+
+  .card__cover-container {
+    @apply absolute inset-0 w-full;
+  }
+
+  .card__cover-img {
+    @apply h-48 w-full bg-white object-cover object-center mix-blend-hard-light transition-all duration-150 ease-in-out group-hover:mix-blend-normal;
+  }
+
+  .card__body {
+    @apply relative flex h-full w-full flex-col gap-4 bg-foreground px-5 pb-5 transition-all duration-150 hover:drop-shadow-xl;
+  }
+
+  .card__title {
+    @apply -mb-1 text-lg font-bold leading-none tracking-tight;
+  }
+
+  .card__description {
+    @apply text-sm;
+  }
+
+  .card__footer {
+    @apply z-10 flex items-center justify-center gap-2 px-5 pb-5;
+  }
+
+  .stack-center {
+    @apply flex h-full flex-wrap items-center justify-center gap-1;
+  }
+
+  .tag {
+    @apply bg-primary-muted px-2 text-sm text-foreground;
+  }
+}
