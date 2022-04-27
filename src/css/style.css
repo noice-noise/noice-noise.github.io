@@ -946,6 +946,10 @@ html {
   height: 12rem;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -1067,6 +1071,11 @@ html {
 
 .to-\[\#A78BFA\] {
   --tw-gradient-to: #A78BFA;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-3 {
