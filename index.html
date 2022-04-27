@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@300;400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body class="body">
     <nav class="main-nav">
       <div class="main-nav__container">
-        <div class="main-nav__profile-container">
+        <div class="main-nav__profile-container lg:flex lg:flex-row">
           <a href="#about">
             <img
               class="h-10 w-10"
@@ -25,9 +25,12 @@
               alt="Raul Comeros, Jr."
             />
           </a>
-          <h2 class="main-nav__profile-title">Raul Comeros, Jr.</h2>
+          <span class="main-nav__profile-title">Raul Comeros, Jr.</span>
         </div>
         <ul class="main-nav__list basis-1/3">
+          <li>
+            <a class="main-nav__list-item" href="#">Why</a>
+          </li>
           <li>
             <a class="main-nav__list-item" href="#about">About</a>
           </li>
@@ -35,19 +38,17 @@
             <a class="main-nav__list-item" href="#projects">Projects</a>
           </li>
           <li>
-            <a class="main-nav__list-item" href="#">Tools</a>
-          </li>
-
-          <li>
             <a class="main-nav__list-item" href="#resume">Resume</a>
           </li>
         </ul>
-        <div class="basis-1/3">
-          <ul class="flex items-center justify-center gap-2 py-5">
+        <div class="hidden basis-1/3 lg:flex">
+          <ul
+            class="flex w-full items-center justify-center gap-2 px-0 py-5 lg:justify-end"
+          >
             <li
               class="group bg-foreground p-3 transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:text-primary-accent hover:shadow-lg hover:shadow-primary/50"
             >
-              <a class="" href="https://github.com/noice-noise" target="_blank">
+              <a href="https://github.com/noice-noise" target="_blank">
                 <span class="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,14 +68,12 @@
                     ></path>
                   </svg>
                 </span>
-                <!-- <span class=" hidden group-hover:flex">GitHub</span> -->
               </a>
             </li>
             <li
               class="group bg-foreground p-3 transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:text-primary-accent hover:shadow-lg hover:shadow-primary/50"
             >
               <a
-                class=""
                 href="https://www.linkedin.com/in/comerosrauljr/"
                 target="_blank"
               >
@@ -99,15 +98,14 @@
                     <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
                   </svg>
                 </span>
-                <!-- <span class=" hidden group-hover:flex">GitHub</span> -->
               </a>
             </li>
             <li
-              class="relative transition-all duration-150 hover:-translate-y-1"
+              class="relative px-6 transition-all duration-150 hover:-translate-y-1 lg:p-0"
             >
               <a
                 class="btn group absolute -top-6 left-0 flex gap-2 p-3"
-                href="#"
+                href="#connect"
               >
                 <span class="transition-all duration-150 ease-in-out">
                   <svg
@@ -134,7 +132,7 @@
                   </svg>
                 </span>
                 <span
-                  class="hidden w-20 flex-nowrap opacity-0 transition-all duration-1000 ease-in-out group-hover:flex group-hover:opacity-100"
+                  class="hidden flex-nowrap opacity-0 transition-all duration-1000 ease-in-out group-hover:flex group-hover:w-20 group-hover:opacity-100"
                 >
                   Say Hello!
                 </span></a
@@ -146,26 +144,98 @@
     </nav>
 
     <main>
-      <div class="container">
-        <section id="about" class="section">
-          <div class="flex h-96 flex-col items-center justify-center gap-5">
-            <div class="flex flex-col items-center justify-center">
+      <div class="flex h-screen w-screen items-center justify-center">
+        <div
+          class="group relative transform-gpu bg-gradient-to-tr from-[#6D28D9] to-[#A78BFA] p-5 shadow-2xl shadow-primary transition-all duration-500 ease-in-out hover:-translate-y-4 hover:cursor-pointer"
+        >
+          <div
+            class="absolute -top-1 -right-1 opacity-100 transition-opacity duration-500 group-hover:opacity-0"
+          >
+            <span class="flex h-3 w-3 items-center justify-center">
+              <span
+                class="absolute inline-flex h-6 w-6 animate-ping rounded-full bg-primary-accent opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex h-3 w-3 rounded-full bg-primary-muted"
+              ></span>
+            </span>
+          </div>
+          <span class="font-code transition-all duration-500 group-hover:mb-10">
+            always
+            <strong class="transition-all duration-500">itching</strong>
+            to
+            <br
+          /></span>
+          <h3
+            class="text-left font-code transition-all duration-500 group-hover:translate-y-6"
+          >
+            <strong class="mt-56 text-5xl font-bold">build</strong>,
+
+            <br /><strong class="text-5xl font-bold">help</strong>, and
+            <br /><strong class="text-5xl font-bold">grow.</strong>
+          </h3>
+          <p
+            class="flex opacity-0 transition-all duration-500 group-hover:mt-20 group-hover:translate-y-4 group-hover:pb-5 group-hover:opacity-100"
+          >
+            Yes, "itching".<span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-bolt"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <polyline
+                  points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"
+                ></polyline>
+              </svg>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <section
+        id="about"
+        class="flex h-screen w-screen items-center justify-center px-5 lg:px-10"
+      >
+        <div
+          class="flex w-full flex-col items-center justify-center gap-5 lg:gap-10"
+        >
+          <div>
+            <div
+              class="flex basis-1/2 flex-col items-center justify-center py-3"
+            >
               <img
                 class="h-32 w-32"
                 src="./src/img/profile_1.png"
                 alt="Raul Comeros, Jr."
               />
             </div>
-            <div>
-              <h1
-                class="theme-dark text-center text-9xl font-extrabold tracking-tight"
-              >
-                Raul Comeros, <span class="font-light">Jr</span>
+            <div class="flex basis-1/2 flex-col gap-2 text-center">
+              <h1 class="text-4xl font-extrabold tracking-tight">
+                Raul Comeros, <span class="font-light">Jr.</span>
               </h1>
+              <p class="py-2 text-xl">
+                a senior
+                <span class="bg-foreground px-2 font-code"
+                  >Bachelor of Science in Computer Engineering</span
+                >
+                <br />
+                at Cebu Institute of Technology - University.
+                <br />
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div class="container">
         <section id="projects" class="section">
           <div>
             <h2 class="py-10 text-center text-5xl font-black">Projects</h2>
@@ -200,7 +270,7 @@
               <div class="card__footer">
                 <a
                   class="btn group"
-                  href="https://github.com/noice-noise/TECH-D"
+                  href="https://github.com/noice-noise/GoGamify-Students"
                   target="_blank"
                 >
                   <span>Documentation</span>
@@ -239,7 +309,10 @@
                 >
                   <span>Documentation</span>
                 </a>
-                <a class="btn group" href="#">
+                <a
+                  class="btn group"
+                  href="https://www.instagram.com/p/CWLQ0o2JPhW/"
+                >
                   <span>Feature Video</span>
                 </a>
               </div>
@@ -270,7 +343,7 @@
               <div class="card__footer">
                 <a
                   class="btn group"
-                  href="https://github.com/noice-noise/TECH-D"
+                  href="https://github.com/noice-noise/AVEM"
                   target="_blank"
                 >
                   <span>Documentation</span>
@@ -279,7 +352,11 @@
             </div>
           </div>
           <div class="mx-auto py-10">
-            <a class="btn group bg-foreground" href="">
+            <a
+              class="btn group bg-foreground"
+              href="https://github.com/noice-noise/"
+              target="_blank"
+            >
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -335,7 +412,7 @@
 
         <section id="resume" class="section">
           <div>
-            <h2 id="" class="section__title">Resume</h2>
+            <h2 class="section__title">Resume</h2>
           </div>
           <div>
             <div class="stack">
@@ -343,8 +420,8 @@
                 <div class="card__cover-container">
                   <img
                     class="card__cover-img h-48"
-                    src="./src/img/gogamify-banner.png"
-                    alt="GoGamify Banner"
+                    src="./src/img/resume-2022-dark.png"
+                    alt="Resume Dark"
                   />
                 </div>
                 <!-- 
@@ -366,8 +443,8 @@
                 <div class="card__cover-container">
                   <img
                     class="card__cover-img h-48"
-                    src="./src/img/gogamify-banner.png"
-                    alt="GoGamify Banner"
+                    src="./src/img/resume-2022-light.png"
+                    alt="Resume Light"
                   />
                 </div>
                 <!-- 
@@ -388,10 +465,149 @@
             </div>
           </div>
         </section>
-        <div class="h-96"></div>
-        <div class="h-96"></div>
-        <div class="h-96"></div>
-        <div class="h-96"></div>
+
+        <section id="connect" class="section">
+          <div>
+            <h2 class="section__title">Connect</h2>
+          </div>
+          <div class="flex flex-col items-center justify-center text-center">
+            <span class="text-lg font-medium">Raul Comeros, Jr.</span> <br />
+            <span class="text-sm font-medium italic"
+              >always itching to build, help, and grow</span
+            >
+            <br />
+            comerosrauljr@gmail.com
+          </div>
+
+          <div>
+            <ul class="flex items-center justify-center gap-2 py-5">
+              <li
+                class="group bg-foreground p-3 transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:text-primary-accent hover:shadow-lg hover:shadow-primary/50"
+              >
+                <a
+                  class=""
+                  href="https://github.com/noice-noise"
+                  target="_blank"
+                >
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-github"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                      ></path>
+                    </svg>
+                  </span>
+                  <!-- <span class=" hidden group-hover:flex">GitHub</span> -->
+                </a>
+              </li>
+              <li
+                class="group bg-foreground p-3 transition-all duration-150 hover:-translate-y-1 hover:cursor-pointer hover:text-primary-accent hover:shadow-lg hover:shadow-primary/50"
+              >
+                <a
+                  class=""
+                  href="https://www.linkedin.com/in/comerosrauljr/"
+                  target="_blank"
+                >
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-linkedin"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                      <line x1="8" y1="11" x2="8" y2="16"></line>
+                      <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                      <line x1="12" y1="16" x2="12" y2="11"></line>
+                      <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                    </svg>
+                  </span>
+                  <!-- <span class=" hidden group-hover:flex">GitHub</span> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <form
+              class="flex flex-col justify-start gap-3"
+              action="mailto:comerosrauljr@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label for="name">
+                <span>Name</span>
+                <input
+                  class="mt-2 block w-full bg-foreground py-2 px-3"
+                  type="text"
+                  name="name"
+                  placeholder="John Dela Cruz"
+                />
+              </label>
+
+              <label for="email">
+                <span>E-mail</span>
+                <input
+                  class="mt-2 block w-full bg-foreground py-2 px-3"
+                  type="email"
+                  name="email"
+                  placeholder="noice@awesome.co"
+                />
+              </label>
+
+              <label for="subject">
+                <span>Subject</span>
+                <input
+                  class="mt-2 block w-full bg-foreground py-2 px-3"
+                  type="email"
+                  name="subject"
+                  placeholder="Some subject maybe"
+                />
+              </label>
+
+              <label for="message">
+                <span>Message</span>
+
+                <textarea
+                  class="mt-2 block w-full bg-foreground py-2 px-3"
+                  type="text"
+                  name="message"
+                  size="50"
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="5"
+                  placeholder="You can just say Hello, really."
+                ></textarea>
+              </label>
+              <input class="btn" type="submit" value="Send" />
+              <input
+                class="btn bg-foreground shadow-none"
+                type="reset"
+                value="Reset"
+              />
+            </form>
+          </div>
+        </section>
+
+        <div class="h-48"></div>
       </div>
     </main>
   </body>

@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["Inter", "Poppins", "system-ui", "Arial", "sans-serif"],
+        code: ["Fira Code", "sans-serif"],
       },
       colors: {
         primary: withOpacityValue("--color-primary"),
