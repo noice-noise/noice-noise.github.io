@@ -97,7 +97,7 @@
   }
 
   .stack {
-    @apply flex flex-col flex-wrap items-stretch justify-center gap-5 sm:flex-row;
+    @apply flex flex-col flex-wrap items-center justify-center gap-5 sm:flex-row lg:items-stretch;
   }
 
   .card {
@@ -109,7 +109,11 @@
   }
 
   .card__cover-img {
-    @apply h-48 w-full bg-white object-cover object-center mix-blend-hard-light transition-all duration-150 ease-in-out group-hover:mix-blend-normal;
+    @apply h-48 w-full bg-white object-cover object-center mix-blend-hard-light transition-all duration-150 ease-in-out group-hover:hidden group-hover:mix-blend-normal;
+  }
+
+  .card__cover-img--hover-content {
+    @apply hidden object-top group-hover:flex;
   }
 
   .card__body {
